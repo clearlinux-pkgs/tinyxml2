@@ -4,7 +4,7 @@
 #
 Name     : tinyxml2
 Version  : 5.0.1
-Release  : 2
+Release  : 3
 URL      : https://github.com/leethomason/tinyxml2/archive/5.0.1.tar.gz
 Source0  : https://github.com/leethomason/tinyxml2/archive/5.0.1.tar.gz
 Summary  : simple, small, C++ XML parser
@@ -44,7 +44,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1511392053
+export SOURCE_DATE_EPOCH=1513641927
 mkdir clr-build
 pushd clr-build
 cmake .. -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_SHARED_LIBS:BOOL=ON -DLIB_INSTALL_DIR:PATH=/usr/lib64 -DCMAKE_AR=/usr/bin/gcc-ar -DLIB_SUFFIX=64 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_RANLIB=/usr/bin/gcc-ranlib
@@ -59,7 +59,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 pushd clr-build ; make test ; popd
 
 %install
-export SOURCE_DATE_EPOCH=1511392053
+export SOURCE_DATE_EPOCH=1513641927
 rm -rf %{buildroot}
 pushd clr-build
 %make_install
