@@ -4,7 +4,7 @@
 #
 Name     : tinyxml2
 Version  : 6.2.0
-Release  : 4
+Release  : 5
 URL      : https://github.com/leethomason/tinyxml2/archive/6.2.0.tar.gz
 Source0  : https://github.com/leethomason/tinyxml2/archive/6.2.0.tar.gz
 Summary  : simple, small, C++ XML parser
@@ -12,6 +12,7 @@ Group    : Development/Tools
 License  : Zlib
 Requires: tinyxml2-lib
 BuildRequires : buildreq-cmake
+Patch1: cve-2018-11210.nopatch
 
 %description
 The (default) Release configuration of this project builds a ready to use static library.
@@ -44,9 +45,13 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1533054718
+export SOURCE_DATE_EPOCH=1533228668
 mkdir clr-build
 pushd clr-build
+export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 %cmake ..
 make  %{?_smp_mflags}
 popd
@@ -59,7 +64,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 pushd clr-build ; make test ; popd
 
 %install
-export SOURCE_DATE_EPOCH=1533054718
+export SOURCE_DATE_EPOCH=1533228668
 rm -rf %{buildroot}
 pushd clr-build
 %make_install
