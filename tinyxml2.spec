@@ -4,7 +4,7 @@
 #
 Name     : tinyxml2
 Version  : 7.0.0
-Release  : 6
+Release  : 7
 URL      : https://github.com/leethomason/tinyxml2/archive/7.0.0.tar.gz
 Source0  : https://github.com/leethomason/tinyxml2/archive/7.0.0.tar.gz
 Summary  : simple, small, C++ XML parser
@@ -53,7 +53,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541632879
+export SOURCE_DATE_EPOCH=1541748089
 mkdir -p clr-build
 pushd clr-build
 export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
@@ -72,7 +72,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 cd clr-build; make test
 
 %install
-export SOURCE_DATE_EPOCH=1541632879
+export SOURCE_DATE_EPOCH=1541748089
 rm -rf %{buildroot}
 pushd clr-build
 %make_install
@@ -84,7 +84,6 @@ popd
 %files abi
 %defattr(-,root,root,-)
 /usr/share/abi/libtinyxml2.so.7.0.0.abi
-/usr/share/abi/libtinyxml2.so.7.abi
 
 %files dev
 %defattr(-,root,root,-)
