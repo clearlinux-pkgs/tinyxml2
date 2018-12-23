@@ -101,6 +101,15 @@ libtinyxml2.so.7:_ZN8tinyxml214XMLDeclarationC2EPNS_11XMLDocumentE
 libtinyxml2.so.7:_ZN8tinyxml214XMLDeclarationD0Ev
 libtinyxml2.so.7:_ZN8tinyxml214XMLDeclarationD1Ev
 libtinyxml2.so.7:_ZN8tinyxml214XMLDeclarationD2Ev
+libtinyxml2.so.7:_ZN8tinyxml27StrPair10TransferToEPS0_
+libtinyxml2.so.7:_ZN8tinyxml27StrPair18CollapseWhitespaceEv
+libtinyxml2.so.7:_ZN8tinyxml27StrPair5ResetEv
+libtinyxml2.so.7:_ZN8tinyxml27StrPair6GetStrEv
+libtinyxml2.so.7:_ZN8tinyxml27StrPair6SetStrEPKci
+libtinyxml2.so.7:_ZN8tinyxml27StrPair9ParseNameEPc
+libtinyxml2.so.7:_ZN8tinyxml27StrPair9ParseTextEPcPKciPi
+libtinyxml2.so.7:_ZN8tinyxml27StrPairD1Ev
+libtinyxml2.so.7:_ZN8tinyxml27StrPairD2Ev
 libtinyxml2.so.7:_ZN8tinyxml27XMLNode10DeleteNodeEPS0_
 libtinyxml2.so.7:_ZN8tinyxml27XMLNode11DeleteChildEPS0_
 libtinyxml2.so.7:_ZN8tinyxml27XMLNode14DeleteChildrenEv
