@@ -4,7 +4,7 @@
 #
 Name     : tinyxml2
 Version  : 7.0.1
-Release  : 9
+Release  : 10
 URL      : https://github.com/leethomason/tinyxml2/archive/7.0.1.tar.gz
 Source0  : https://github.com/leethomason/tinyxml2/archive/7.0.1.tar.gz
 Summary  : simple, small, C++ XML parser
